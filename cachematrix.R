@@ -4,7 +4,9 @@
 ## Version 1.0
 
 
-## Create a matrix and cache the inverse of this matrix
+## This function create a matrix and can cache the inverse of this matrix.
+## Inside this function you can find a set/get function and a setinv-getinv for the inverse.
+## The setinv function is used to cache the inverse of the matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -30,9 +32,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Calculate the inverse. If the result is inside the cache, use the cache.
-## Or calculate it and put it into the cache
-## Return a matrix that is the inverse of 'x'
+## Calculate the inverse. If the result is inside the cache (!is.null(inv)) , use the cache.
+## Or calculate it and put it into the cache in order use next time.
+## This function return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
 
