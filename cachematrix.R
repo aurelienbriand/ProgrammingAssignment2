@@ -1,4 +1,4 @@
-## Inside this script, there is 2 function to calculate the inv of a 
+## Inside this script, there are 2 functions to calculate the inverse of a 
 ## matrix fast as possible (using cache)
 ## Created by Aurelien Briand the 20/02/2015
 ## Version 1.0
@@ -32,6 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Calculate the inverse. If the result is inside the cache, use the cache.
 ## Or calculate it and put it into the cache
+## Return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
 
@@ -43,7 +44,6 @@ cacheSolve <- function(x, ...) {
 	data <- x$get()
         inv <- solve(data, ...)
         x$setinv(inv)
+        
         return(inv)
-
-        ## Return a matrix that is the inverse of 'x'fin
 }
